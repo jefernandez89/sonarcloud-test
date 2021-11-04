@@ -52,6 +52,17 @@ const DocsMenu = observer(() => {
       },
     })
   }
+  
+  const _openDocsTest = (e) => {
+    e.preventDefault()
+    ipc.externalOpen({
+      url: 'https://on.cypress.io/docs',
+      params: {
+        utm_medium: 'Nav',
+        utm_campaign: 'Docs',
+      },
+    })
+  }
 
   const _handleMenuClick = (e, item) => {
     e.preventDefault()
